@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Update UI</title>
+  <link rel="stylesheet" href="update-styles.css">
+  <style>
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #8e44ad, #3498db);
+}
+
+.update-container {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 450px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus {
+  border-color: #8e44ad;
+  outline: none;
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: #8e44ad;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #5e3370;
+}
+p{
+color:red;
+}
+
+  </style>
+</head>
+<body>
+  <div class="update-container">
+    <h2>Update Information</h2>
+    <form action="update" method="POST" id="update-form">
+      <div class="form-group">
+        <label for="id">ID:</label>
+        <input type="text" id="id" name="id" placeholder="Enter your ID" required>
+      </div>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your Name" required>
+      </div>
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" placeholder="Enter your Age" min="1" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+      </div>
+      <div class="form-group">
+        <label for="salary">Salary:</label>
+        <input type="number" id="salary" name="salary" placeholder="Enter your Salary" min="0" step="0.01" required>
+      </div>
+      <button type="submit" class="submit-btn">Submit</button>
+      <p>Invalid Id❌❌❌ Input please try again</p>
+    </form>
+  </div>
+</body>
+</html>
